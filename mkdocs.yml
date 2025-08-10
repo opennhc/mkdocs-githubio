@@ -1,10 +1,20 @@
-# https://squidfunk.github.io/mkdocs-material/reference/
+hooks:
+  - hooks/debug.py
+  # https://squidfunk.github.io/mkdocs-material/reference/
 site_name: nhc mkdocss
 site_url: https://opennhc.github.io/mkdocs-githubio
+plugins:
+  - search
+  - meta
+  - blog
+  - tags
 theme:
   name: material
-#  icon:
+  language: en
+  custom_dir: overrides
+  icon:
 #    logo: fontawesome/solid/user-shield
+    search: material/text-search
   logo: assets/nhc-black.png
   favicon: assets/nhc-white.ico
   palette:
@@ -23,8 +33,17 @@ theme:
     - content.code.select
     - content.code.annotate
     - navigation.footer
+    - announce.dismiss
+    - navigation.tracking
+    - navigation.instant
+#    - navigation.instant.preview
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+    - search.share
 
-#    primary: green
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
@@ -52,8 +71,30 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+#  - material.extensions.preview:
+#      configurations:
+#        - targets:
+#            include:
+#              - howtos/index.md
 extra:
   social:
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/jsanchezperez
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+#  alternate:
+#    - name: English
+#      link: /en/
+#      lang: en
+#    - name: Spanish
+#      link: /es/
+#      lang: es
 copyright: Copyright &copy; 2025 JSanchez (nhc org)
