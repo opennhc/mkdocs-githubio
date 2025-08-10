@@ -1,6 +1,6 @@
 # https://squidfunk.github.io/mkdocs-material/reference/
 site_name: nhc mkdocss
-site_url: https://sitename.examples
+site_url: https://opennhc.github.io/mkdocs-githubio
 theme:
   name: material
 #  icon:
