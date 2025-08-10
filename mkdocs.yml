@@ -1,0 +1,59 @@
+# https://squidfunk.github.io/mkdocs-material/reference/
+site_name: nhc mkdocss
+site_url: https://sitename.examples
+theme:
+  name: material
+#  icon:
+#    logo: fontawesome/solid/user-shield
+  logo: assets/nhc-black.png
+  favicon: assets/nhc-white.ico
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: nhc-l #slate
+      toggle:
+       icon: material/lightbulb
+       name: Light mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: nhc-d #slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Dark mode
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - navigation.footer
+
+#    primary: green
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#  https://pygments.org/docs/lexers/
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+# Tabs https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
+  - pymdownx.tabbed:
+      alternate_style: true
+# admonition https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+  - admonition
+  - pymdownx.details
+# diagrams https://squidfunk.github.io/mkdocs-material/reference/diagrams/
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/jsanchezperez
+copyright: Copyright &copy; 2025 JSanchez (nhc org)
